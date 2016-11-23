@@ -6,15 +6,60 @@
 ####支持pod导入
 
 ```
-pod 'XLJMatchScreen', '~> 1.0.0'
+pod 'XLJScreenMatching', '~> 1.0.3'
 
 ```
+######如果发现pod search XLJNewFeature 搜索出来的不是最新版本，需要在终端执行cd转换文件路径命令退回到desktop，然后执行pod setup命令更新本地spec缓存（可能需要几分钟），然后再搜索就可以了。
+
+###使用方法
+直接在你的`.pch`文件中导入文件`XLJMatchScreen.h`
 
 ###更新记录:
 
-####2016-11-22
+####★★★★ 2016-11-23 ★★★★
 ####1. 提交iOS手写代码时对控件位置在不同的屏幕上的自动适配问题。
 ####2. 颜色自动转换成十六进制
+
+####接口:
+
+```
+/**
+ * 重写RectMake
+ */
+CG_INLINE CGRect
+XLJ_CGRectMake(CGFloat x, CGFloat y, CGFloat width, CGFloat height)
+{
+    CGRect rect;
+    rect.origin.x = XLJ_MatchXFlaot(x);
+    rect.origin.y = XLJ_MatchYFlaot(y);
+    rect.size.width = XLJ_MatchWidthFlaot(width);
+    rect.size.height = XLJ_MathHeightFlaot(height);
+    
+    return rect;
+}
+
+
+```
+
+```
+- (void)testOne
+{
+    
+    UIView *vc = [[UIView alloc] initWithFrame:XLJ_CGRectMake(10, 80, XLJScreenWidth-20, 40)];
+    
+    vc.backgroundColor = [UIColor orangeColor];
+    
+    UILabel *lable = [[UILabel alloc] initWithFrame:XLJ_CGRectMake(10, 80, XLJScreenWidth-20, 40)];
+    lable.text = @"我是测试信息:XLJ_CGRectMake";
+    lable.font = [UIFont systemFontOfSize:XLJ_MatchXFlaot(14)];
+    lable.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:vc];
+    [self.view addSubview:lable];
+
+
+}
+
+```
 
 ###各屏幕尺寸
 
@@ -99,3 +144,4 @@ static const float  XLJUISrceenHight =  667.0;
 ####Email: marlonxlj@163.com
 
 ##PS:
+![Alt Text](https://github.com/marlonxlj/ScreenMatching/blob/master/jjj.gif)
