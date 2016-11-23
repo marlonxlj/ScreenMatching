@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint XLJScreenMatching.podspec' to ensure this is a
+#  Be sure to run `pod spec lint XLJScreenMatchings.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "XLJScreenMatching"
-  s.version      = "1.0.0"
+  s.name         = "XLJScreenMatchings"
+  s.version      = "1.0.3"
   s.summary      = "iOS 4S-7Plus手写代码屏幕全自动适配，完全不用担心尺寸问题"
 
   # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = "所有屏幕的完全自动适配,使用此方法再也不用担心屏幕适配的问题，愉快的解决了问题。"
 
-  s.homepage     = "https://github.com/marlonxlj/ScreenMatchingDemo"
+  s.homepage     = "https://github.com/marlonxlj/ScreenMatching"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -37,8 +37,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  # s.license      = "MIT (example)"
-  s.license = { :type => "MIT", :file => "LICENSE" }
+  # s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/marlonxlj/ScreenMatchingDemo.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/marlonxlj/ScreenMatching.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
