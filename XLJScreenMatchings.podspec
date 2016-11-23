@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "XLJScreenMatchings"
-  s.version      = "1.0.3"
+  s.version      = "1.1.0"
   s.summary      = "iOS 4S-7Plus手写代码屏幕全自动适配，完全不用担心尺寸问题"
 
   # This description is used to generate tags and improve search results.
